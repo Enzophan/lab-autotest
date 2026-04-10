@@ -2,8 +2,7 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches:
-      - master # Change this to your default branch name
+    branches: [ main, master ]
 
 permissions:
   contents: write
@@ -16,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node ⚙️
-        uses: actions/actions-setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: 'npm'
